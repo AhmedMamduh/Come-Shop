@@ -7,6 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # encoding: utf-8
 Product.delete_all
+Product.create!(title: 'Iphone X',
+  description: 
+    %{<p>
+      iPhone X black, Face ID, 256GB storage And
+      the most powerful and smartest chip ever in
+      a smartphone.
+      </p>},
+  image_url: 'iphone.jpg',    
+  price: 21500.0)
+# . . .
 Product.create!(title: 'CoffeeScript',
   description: 
     %{<p>

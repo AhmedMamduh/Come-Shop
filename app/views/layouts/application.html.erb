@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pragprog Books Online Store</title>
+    <title>Come&Shop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,8 +11,7 @@
 
   <body class='<%= controller.controller_name %>'>
     <div id="banner">
-      <%= image_tag("logo.png") %>
-      <%= @page_title || "Pragmatic Bookshelf" %>
+      <%= @page_title || image_tag("come.jpg") %>
     </div>
 <div id="columns">
   <div id="side">
@@ -25,10 +24,10 @@
     </div>
     
     <ul>
-      <li><a href="http://www....">Home</a></li>
-      <li><a href="http://www..../faq">Questions</a></li>
-      <li><a href="http://www..../news">News</a></li>
-      <li><a href="http://www..../contact">Contact</a></li>
+      <li><%= link_to "Home", store_path %></li>
+      <li><a href="">Questions</a></li>
+      <li><a href="">News</a></li>
+      <li><a href="">Contact</a></li>
     </ul>
     </div>
   <div id="main">

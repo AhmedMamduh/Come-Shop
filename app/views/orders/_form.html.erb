@@ -1,6 +1,12 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    
+      
+
+
 <%= form_with(model: @order, local: true) do |form| %>
   <% if @order.errors.any? %>
-    <div id="error_explanation">
+    <div id="errors">
       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
 
       <ul>
@@ -11,27 +17,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, size: 40 %>
+    <%= form.text_field :name, size: 40,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_area :address, rows: 3, cols: 40 %>
+    <%= form.text_area :address, rows: 3, cols: 40,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.email_field :email, size: 40 %>
+    <%= form.email_field :email, size: 40,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order::PAYMENT_TYPES, prompt: 'Select a payment method' %>
+    <%= form.select(:pay_type, Order::PAYMENT_TYPES, {prompt: 'Select a payment method'}, { :class => 'form-control' }) %>
   </div>
+<br>
 
   <div class="actions">
-    <%= form.submit 'Place Order' %>
+    <%= form.submit 'Place Order', class: "btn btn-info" %>
   </div>
 <% end %>
+
+
+
+</div>
+</div>
