@@ -13,26 +13,33 @@
     <div id="banner">
       <%= @page_title || image_tag("come.jpg") %>
     </div>
-<div id="columns">
-  <div id="side">
-    <div id="cart">
-      <% if @cart %>
-      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-        <%= render @cart %>
-      <% end %>
-      <% end %>
-    </div>
     
-    <ul>
+    <nav class="navbar navbar-expand-sm bg-light">
+      <%= link_to "Home", store_path, class: "navbar-brand" %>
+      <a href="" class="navbar-brand">Questions</a>
+      <a href="" class="navbar-brand">News</a>
+      <a href="" class="navbar-brand">Contact</a>
+    </nav>
+
+    <div id="columns">
+      <div id="side">
+        <div id="cart">
+          <% if @cart %>
+            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+            <%= render @cart %>
+            <% end %>
+          <% end %>
+        </div>
+    <!--<ul>
       <li><%= link_to "Home", store_path %></li>
       <li><a href="">Questions</a></li>
       <li><a href="">News</a></li>
       <li><a href="">Contact</a></li>
-    </ul>
+    </ul> -->
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
     </div>
-  <div id="main">
-    <%= yield %>
-  </div>
-</div>
-</body>
+  </body>
 </html>
