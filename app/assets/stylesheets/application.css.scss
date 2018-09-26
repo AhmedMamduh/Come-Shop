@@ -172,3 +172,14 @@ nav{
     justify-content: center;
     background-color: white;
 }
+
+.logout {
+	color: #337ab7;
+	border: none;
+	background-color: white;
+	float: right;
+	padding-right:0;
+	&:hover {
+		color: #ff9966;
+	}
+}
