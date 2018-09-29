@@ -38,25 +38,13 @@ p, ol, ul {
   font-size: 10px;
 }
 
-#banner {
-	background: #ffffff;
-	border-bottom: 2px solid;
-	border-color: #e6e6e6;
-	text-align: center;
-
-	img {
-		width: 400px;
-		height: 100%;
-	}
-}
-
 #notice {
-color: #000 !important;
-border: 2px solid #0099ff;
-padding: 1em;
-margin-bottom: 2em;
-background-color: #ffffff;
-font: bold smaller sans-serif;
+	color: #000 !important;
+	border: 2px solid #0099ff;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #ffffff;
+	font: bold smaller sans-serif;
 }
 
 #main {
@@ -67,22 +55,18 @@ font: bold smaller sans-serif;
 	border-color: #e6e6e6;
 }
 
-
-
-
 	#side::-webkit-scrollbar { 
     	display: none;  
 	}
 
 	#side {
-	padding-top: 150px;
+		padding-top: 150px;
 		overflow:hidden;
 	    overflow-y:scroll;
 		position: fixed;
 		float: left;
-		
 		min-width: 9em;
-		width: 17em;
+		max-width: 17em;
 		height:100%;
 		background: #ffffff;
 
@@ -95,7 +79,6 @@ font: bold smaller sans-serif;
 		}
 
 		#cart {
-
 			font-size: smaller;
 			table {
 				border-top: 1px dotted #bfbfbf;
@@ -138,7 +121,7 @@ legend {
 	  	padding: 25px 10px;
 
 	  	a {
-				color: #529ECC;
+			color: #529ECC;
 	  	}
 	  }
 	}
@@ -150,13 +133,13 @@ textarea {
 }
 
 
-
 .logout {
 	color: #337ab7;
 	border: none;
 	background-color: white;
 	float: right;
 	padding-right:0;
+
 	&:hover {
 		color: #ff9966;
 	}
@@ -168,18 +151,17 @@ textarea {
 }
 
 footer {
-
     clear: both;
     position: relative;
     margin-top: -1em;
 
 	    .copyright-text p {
-	    color: gray;
-	    margin-top: 9px;
-	    margin-bottom: 0;
-	    text-align: center;
-	    padding-left: 25em !important;
-		padding-right: 19em !important;
+		    color: gray;
+		    margin-top: 9px;
+		    margin-bottom: 0;
+		    text-align: center;
+		    padding-left: 25em !important;
+			padding-right: 19em !important;
 		}
 
 		.social-link {
@@ -216,15 +198,15 @@ nav{
 	Right: 30px !important;
 	Left: 30px !important;
 	font-weight: bold;
-}
 
-.navbar-brand {
-  padding: 0px;
-}
+	.navbar-brand {
+	  padding: 0px;
+	}
 
-.navbar-brand>img {
-  height: 100%;
-  padding: 15px;
-  width: auto;
-  padding: 7px 15px;
+	.navbar-brand>img {
+	  height: 100%;
+	  padding: 15px;
+	  width: auto;
+	  padding: 7px 15px;
+	}
 }
