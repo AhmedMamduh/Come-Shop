@@ -21,11 +21,11 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  height: 100%;
+  height: 98%;
 }
 
 html {
-  height: 100%;
+  height: 98%;
 }
 
 p, ol, ul {
@@ -59,26 +59,29 @@ background-color: #ffffff;
 font: bold smaller sans-serif;
 }
 
-#columns {
-	background: #ffffff;
-	#main {
-		margin-left: 17em;
-		margin-right: 14em;
-		padding: 1em;
-		padding-top: 0px;
-		border-color: #e6e6e6;
-	}
+#main {
+	padding-left: 17em !important;
+	padding-right: 7em !important;
+	padding: 1em;
+	padding-top: 90px;
+	border-color: #e6e6e6;
+}
+
+
+
 
 	#side::-webkit-scrollbar { 
     	display: none;  
 	}
 
 	#side {
+	padding-top: 150px;
 		overflow:hidden;
 	    overflow-y:scroll;
 		position: fixed;
 		float: left;
-		padding: 1em 1em;
+		
+		min-width: 9em;
 		width: 17em;
 		height:100%;
 		background: #ffffff;
@@ -92,6 +95,7 @@ font: bold smaller sans-serif;
 		}
 
 		#cart {
+
 			font-size: smaller;
 			table {
 				border-top: 1px dotted #bfbfbf;
@@ -99,28 +103,8 @@ font: bold smaller sans-serif;
 				margin-bottom: 10px;
 			}
 		}
-
-		ul {
-			margin-top: 20px;
-			padding: 0;
-
-			li {
-				list-style: none;
-				padding-bottom: 15px;
-			
-				a {
-					color: #0099ff;
-					font-weight: bold;
-					text-decoration: none;
-
-				  	&:hover {
-					    color: #ff9966;
-				 	}
-				}
-			}
-		}
 	}
-}
+
 
 legend {
 	border-radius: 5px;
@@ -165,13 +149,7 @@ textarea {
 	resize: none;
 }
 
-nav{
-    padding-top: 8px;
-    height: 10px;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
+
 
 .logout {
 	color: #337ab7;
@@ -182,4 +160,71 @@ nav{
 	&:hover {
 		color: #ff9966;
 	}
+}
+
+
+#container {
+   min-height:97%;
+}
+
+footer {
+
+    clear: both;
+    position: relative;
+    margin-top: -1em;
+
+	    .copyright-text p {
+	    color: gray;
+	    margin-top: 9px;
+	    margin-bottom: 0;
+	    text-align: center;
+	    padding-left: 25em !important;
+		padding-right: 19em !important;
+		}
+
+		.social-link {
+			padding-left: 25em !important;
+			padding-right: 19em !important;
+		    text-align: center;
+		}
+		
+		.social-link li {
+		    display: inline-block;
+		    margin: 0 7px;
+		}
+
+		.social-link li a {
+		    color: gray;
+		    border: 1px solid gray;
+		    width: 40px;
+		    height: 40px;
+		    line-height: 40px;
+		    border-radius: 50%;
+		    text-align: center;
+		    display: inline-block;
+		    font-size: 18px;
+		}
+
+}
+
+
+nav{
+	border: none !important;
+	padding: 15px !important;
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	z-index: 3;
+	Right: 30px !important;
+	Left: 30px !important;
+	font-weight: bold;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+  padding: 7px 15px;
 }
