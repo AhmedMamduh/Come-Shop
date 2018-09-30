@@ -1,9 +1,11 @@
 <% if line_item == @current_item %>
 <tr id="current_item">
 <% else %>
-<tr>
+<tr class="items">
 <% end %>
-	<td class="items"><%= line_item.quantity %>&times;</td>
-	<td class="items"><%= line_item.product.title %></td>
+	<td><%= line_item.quantity %></td>
+	<td><%= line_item.product.title %></td>
+	<td><%= image_tag line_item.product.image_url, width: "65px" %></td>
 	<td class="item_price"><%=number_to_currency(line_item.total_price, :unit => "EGP ")%></td>
+	<td><%= link_to 'Remove', line_item, method: :delete, class: "btn btn-danger" %></td>
 </tr>

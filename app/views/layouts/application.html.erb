@@ -32,6 +32,12 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", store_path%></li>
           <li><%= link_to "About", store_about_path%></li>
+          <li><%= link_to " ", new_order_path, class: "glyphicon glyphicon-shopping-cart"%></li>
+
+          <% if @cart %>
+            <li id="logo"><% render("carts/cart_logo")%><%= @logo %></li>
+          <% end %>
+          
           <% if session[:user_id] %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
@@ -51,18 +57,7 @@
     <!--/.container-fluid -->
   </nav>
 </div>
-    
 
-    
-      <div id="side" class="container">
-        <div id="cart" class="container">
-          <% if @cart %>
-            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-            <%= render @cart %>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
        
       <div id="main" class="container">
         <%= yield %>
@@ -71,16 +66,16 @@
 
         <!-- Footer -->
 <footer class="container">
-            <div class="col-sm">              
+            <div class="col-xs">              
               <ul class="social-link">
                 <li><a href="https://www.linkedin.com/in/ahmed-mamduh" target="_blank" ><span class="fa fa-linkedin"></span></a></li>
                 <li><a href="https://github.com/AhmedMamduh" target="_blank" ><span class="fa fa-github"></span></a></li>
               </ul>             
             </div>
  
-            <div class="col-sm">
+            <div class="col-xs">
               <div class="copyright-text">
-                <p>Come&Shop © 2018</p>
+                <p>Come&Shop © Copyright 2018</p>
               </div>
             </div>
   </footer>

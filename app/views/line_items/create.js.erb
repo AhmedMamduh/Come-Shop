@@ -4,5 +4,7 @@ if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
-$('#current_item').css({'background-color':'#e6e6e6'}).
+
+$('#logo').html("<%= escape_javascript render("carts/cart_logo") %>");
+$('#logo').css({'background-color':'#e6e6e6', 'color': 'red'}).
 animate({'background-color':'#ffffff'}, 1000);

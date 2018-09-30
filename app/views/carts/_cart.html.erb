@@ -1,22 +1,35 @@
 <% unless cart.line_items.empty? %>
+
 <%= image_tag "cart-logo.png", width:"35px" %>
 <div class="cart_title">Your Cart</div>
-<table>
+<table class="table">
+	<tr class="items">
+		<td>Qty</td>
+		<td>Title</td>
+		<td>Image</td>
+		<td>price</td>
+		<td></td>
+	</tr>
 	<%= render(cart.line_items) %>
 	
-	<tr class="total_line">
-		<td colspan="2">Total</td>
-		<td class="total_cell"><%= number_to_currency(cart.total_price, :unit => "EGP ") %></td>
+	<tr class="items">
+		<td colspan="2"></td>
+		<td></td>
+		<td class="total_cell">Total<br><%= number_to_currency(cart.total_price, :unit => "EGP ") %></td>
 	</tr>
 
+	<% render("carts/cart_logo") %>
 </table>
 
-<%= button_to "Checkout", new_order_path, method: :get, class: "btn btn-info" %>
+
+
+<%= button_to "Continue Shopping", store_path, method: :get, class: "btn btn-info" %> 
+<br>
 <%= button_to 'Empty cart', cart, method: :delete,
 data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
 <br>
-<%= image_tag "sale.jpg", width:"100%" %>
-<br><br>
-<%= image_tag "10.png", width:"100%"%>
+
+
 
 <% end %>
