@@ -41,6 +41,7 @@ nav{
 	Right: 30px !important;
 	Left: 30px !important;
 	font-weight: bold;
+	font-size: 100px !important;
 
 	.navbar-brand {
 	  padding: 0px;
@@ -74,6 +75,24 @@ nav{
    min-height:97%;
 }
 
+.container2 {
+	position: relative;
+	min-height:97%;
+   	padding-left: 10%;
+	padding-right: 10%;
+	width: 100%;
+
+	h2 {
+		text-align: center;
+	}
+
+	ul,p {
+	  font-family: verdana, arial, helvetica, sans-serif;
+	  font-size: 16px;
+	  line-height: 28px;
+	}
+}
+
 #notice {
 	color: #000 !important;
 	border: 2px solid #0099ff;
@@ -96,11 +115,11 @@ legend {
 
 #pics {
   margin: 0 auto;
-  width: 95%;
+  width: 97%;
 
   .box {
 	  margin: 15px;
-	  width: 95%;
+	  width: 97%;
   	  min-height: 520px;
   	  max-height: auto;
 	  box-shadow: 0 1px 1px 0 rgba(82,158,204, 0.48);
