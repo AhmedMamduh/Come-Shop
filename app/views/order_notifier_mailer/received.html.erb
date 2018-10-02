@@ -1,3 +1,21 @@
+<html>
+<head>
+    <style type="text/css" media="screen">
+      table {
+      	width: 100%;
+      }
+      td {
+		color: gray;
+		text-align: center;
+		font-weight: bold;
+		vertical-align: baseline !important;
+		}
+    </style>
+</head>
+<body>
+
+<%= image_tag (attachments["10.png"].url), width:"100%", height:"80px"  %>
+
 <h2>Dear <%= @order.name %></h2>
 
 <p>
@@ -8,13 +26,25 @@ You ordered the following items:
 
 <table>
 	<tr>
-		<th colspan="2">Description</th>
-		<th>Price</th>
+		<td>Qty</td>
+		<td>Title</td>
+		<td>Image</td>
+		<td>Price</td>
 	</tr>
-	<%= render @order.line_items -%>
-</table>
 
+	<% @order.line_items.each do |line_item| %>
+	<tr>
+		<td><%= line_item.quantity %></td>
+		<td><%= line_item.product.title %></td>
+		<td><%= image_tag (attachments["#{line_item.product.image_url}"].url), width:"50px%", height:"50px" %></td>
+		<td class="item_price"><%=number_to_currency(line_item.total_price, :unit => "EGP ")%></td>
+	</tr>
+	<% end %>
+</table>
 <br>
 <p>
 We'll send you a separate e-mail when your order ships.
 </p>
+
+</body>
+</html>

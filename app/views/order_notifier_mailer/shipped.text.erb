@@ -1,4 +1,39 @@
+<html>
+<head>
+    <style type="text/css" media="screen">
+      table {
+      	width: 100%;
+      }
+      td {
+		color: gray;
+		text-align: center;
+		font-weight: bold;
+		vertical-align: baseline !important;
+		}
+    </style>
+</head>
+<body>
+
 Come&Shop Order Shipped
 This is just to let you know that we've shipped your recent order:
 
-<%= render @order.line_items -%>
+<table>
+	<tr>
+		<td>Qty</td>
+		<td>Title</td>
+		<td>Image</td>
+		<td>Price</td>
+	</tr>
+
+	<% @order.line_items.each do |line_item| %>
+	<tr>
+		<td><%= line_item.quantity %></td>
+		<td><%= line_item.product.title %></td>
+		<td><%= image_tag (attachments["#{line_item.product.image_url}"].url), width:"50px%", height:"50px" %></td>
+		<td class="item_price"><%=number_to_currency(line_item.total_price, :unit => "EGP ")%></td>
+	</tr>
+	<% end %>
+</table>
+
+</body>
+</html>
